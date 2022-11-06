@@ -13,10 +13,6 @@ soup1 = BeautifulSoup(html_content1 ,"lxml")
 # print(soup)
 output = []
 
-case_id = str(input("Enter case ID\n"))
-year = str(input("Enter year\n"))
-
-
 Headers1 =  {	
         "Accept" : "*/*",
         "Accept-Encoding" : "gzip, deflate, br",
@@ -35,8 +31,8 @@ Headers1 =  {
 payload1 = {
     	"type":"R",
         "case_type":"1",
-        "caseNo": case_id,
-        "year":year,
+        "caseNo":"5",
+        "year":"2022"
     }
 
 responce2 = session.post(url1, headers = Headers1, data = payload1, verify=False)
